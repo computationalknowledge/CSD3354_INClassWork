@@ -10,7 +10,13 @@ namespace C838383
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(Calculator.Addition(2, 2));
+            // Console.WriteLine(Calculator.Addition(2, 2));
+            Console.WriteLine(Calculator.Subtraction(3, 4));
+            Console.WriteLine(Calculator.Multiply(2, 2));
+            Console.WriteLine(Calculator.Devide(3, 4));
+
+            Calculator calc1 = new Calculator();
+            Console.Write("the answer is {0}", calc1.Addition(84, 3333));
 
         }
     }
@@ -25,11 +31,25 @@ namespace C838383
         // static means: I call the METHOD on the CLASS, NOT on an OBJECT of the Class
         // my parameters need to have data types: str, int
 
-        public static float Addition(float input1, float input2)
+        public float Addition(float input1, float input2)
         {
             return input1 + input2;
         }
 
+        public static float Subtraction(float input1, float input2)
+        {
+            return input1 - input2;
+        }
+
+        public static float Multiply(float input1, float input2)
+        {
+            return input1 * input2;
+        }
+
+        public static float Devide(float input1, float input2)
+        {
+            return input1 / input2;
+        }
     }
-   
+
 }
