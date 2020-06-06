@@ -11,7 +11,7 @@ namespace C838383
         {
             // let's practice using RECURSION
             // remember recursion is a METHOD CALLING ITSELF!
-            new Tangerine().IAmRecurive();
+            new Tangerine().IAmRecurive(5);
 
 
         }
@@ -19,9 +19,18 @@ namespace C838383
 
     class Tangerine
     {
-        public void IAmRecurive()
+        public void IAmRecurive(int Factorial)
         {
-            IAmRecurive();
+            int Product = 1 ; 
+            
+            if (Factorial == 1) { return; }
+            Product *= Factorial;
+            Factorial--;
+            // am I still in the method?  I have "returned" out of it??
+            // in this case I execute another recursion!
+
+            IAmRecurive(Factorial);
+            Console.WriteLine("factorial is {0}", Factorial);
         }
 
     }
